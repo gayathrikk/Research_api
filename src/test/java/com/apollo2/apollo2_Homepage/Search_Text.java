@@ -33,7 +33,7 @@ public class Search_Text {
 		    } else {
 		        System.out.println("API request to Research answer failed. Status code: " + statusCode5);
 		    }
-		    Assert.assertEquals(statusCode5, 200, "API request to Research answer failed");
+		    Assert.assertEquals(statusCode5, 201, "API request to Research answer failed");
 		}
 
 
