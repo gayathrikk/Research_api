@@ -25,7 +25,7 @@ public class Search_Text {
 		            .when()
 		                .post("https://apollo2.humanbrain.in/chat/qa_chain");
 		    int statusCode5 = response5.getStatusCode();
-		    if (statusCode5 == 200) {
+		    if (statusCode5 == 201) {
 		        System.out.println("API request to Research answer passed. Status code: " + statusCode5);
 		        // Print response body
 		        String responseBody = response5.getBody().asString();
