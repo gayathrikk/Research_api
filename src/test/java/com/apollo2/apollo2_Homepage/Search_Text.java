@@ -25,7 +25,7 @@ public class Search_Text {
 		            .when()
 		                .post("https://apollo2.humanbrain.in/chat/qa_chain");
 		    int statusCode5 = response5.getStatusCode();
-		    if (statusCode5 == 201) {
+		    if (statusCode5 == 200) {
 		        System.out.println("API request to Research answer passed. Status code: " + statusCode5);
 		        // Print response body
 		        String responseBody = response5.getBody().asString();
@@ -33,7 +33,7 @@ public class Search_Text {
 		    } else {
 		        System.out.println("API request to Research answer failed. Status code: " + statusCode5);
 		    }
-		    Assert.assertEquals(statusCode5, 201, "API request to Research answer failed");
+		    Assert.assertEquals(statusCode5, 200, "API request to Research answer failed");
 		}
 
 
