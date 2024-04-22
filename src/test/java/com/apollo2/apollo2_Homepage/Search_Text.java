@@ -20,12 +20,14 @@ public class Search_Text {
 		                .auth()
 		                .preemptive()
 		                .basic("admin", "admin")
-		                .contentType(ContentType.JSON) // Assuming the server accepts JSON
-		                .body(graphQLBody) // GraphQL query
+		                .contentType(ContentType.JSON) 
+		                .body(graphQLBody) 
 		            .when()
 		                .post("https://apollo2.humanbrain.in/chat/qa_chain");
 		    int statusCode5 = response5.getStatusCode();
 		    if (statusCode5 == 200) {
+		    	 String URL="https://apollo2.humanbrain.in/chat/qa_chain";
+			     System.out.println("URL is : "+URL);
 		        System.out.println("API request to Research answer passed. Status code: " + statusCode5);
 		        // Print response body
 		        String responseBody = response5.getBody().asString();
