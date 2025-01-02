@@ -23,10 +23,10 @@ public class Search_Text {
 		                .contentType(ContentType.JSON) 
 		                .body(graphQLBody) 
 		            .when()
-		                .post("https://apollo2.humanbrain.in/chat/qa_chain");
+		                .post("https://apollo2.humanbrain.in/analytics/saveSearchHistory");
 		    int statusCode5 = response5.getStatusCode();
 		    if (statusCode5 == 200) {
-		    	 String URL="https://apollo2.humanbrain.in/chat/qa_chain";
+		    	 String URL="https://apollo2.humanbrain.in/analytics/saveSearchHistory";
 			     System.out.println("URL is : "+URL);
 		        System.out.println("API request to Research answer passed. Status code: " + statusCode5);
 		        // Print response body
